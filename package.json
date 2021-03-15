@@ -2,9 +2,9 @@
   "name": "node",
   "version": "1.0.0",
   "description": "",
-  "main": "ex.js",
+  "main": "node.js",
   "scripts": {
-    "start": "node ex.js"
+    "start": "node node.js"
   },
   "keywords": [],
   "author": "",
