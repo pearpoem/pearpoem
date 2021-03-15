@@ -6,6 +6,7 @@ const timeout = ms => new Promise(res => setTimeout(res, ms))
 const upbit = new Upbit('1', '1')
 
 let notiJson;
+let initStart = 0;
 
 app.get("/", (req, res) => {
     start()
@@ -17,14 +18,14 @@ app.get("/", (req, res) => {
 
 
     })
-app.listen(PORT)
+app.listen('3000')
 
 async function start() {
     notiJson  = await upbit.notice_info();
 
     if(notiJson.success){
-       
-            console.log('루프수 : '+initStart+'   ||   '+' 최초정보 : '+bfId+','+bfAsserts+'   ||   후행정보 : '+afId+','+afAsserts)
+        initStart++;
+            console.log('루프수 : '+initStart)
                 setTimeout( function() {
                     //console.log('timer test');
                     start()
