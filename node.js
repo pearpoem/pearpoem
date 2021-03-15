@@ -8,6 +8,7 @@ const upbit = new Upbit('1', '1')
 let notiJson;
 
 app.get("/", (req, res) => {
+    start()
     res.send(notiJson)
     })
 app.listen(PORT)
