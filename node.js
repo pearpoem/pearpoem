@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 
 
     })
-app.listen('3000')
+app.listen(PORT)
 
 async function start() {
     notiJson  = await upbit.notice_info();
